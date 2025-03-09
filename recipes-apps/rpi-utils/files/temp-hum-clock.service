@@ -1,0 +1,11 @@
+[Unit]
+Description=Temperature, Humidity and Clock Service
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/temp-hum-clock -HTt
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
